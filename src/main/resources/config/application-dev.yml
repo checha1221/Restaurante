@@ -27,8 +27,8 @@ spring:
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:postgresql://localhost:5432/restaurante
-        username: restaurante
-        password:
+        username: postgres
+        password: root
     jpa:
         database-platform: io.github.jhipster.domain.util.FixedPostgreSQL82Dialect
         database: POSTGRESQL
@@ -42,8 +42,8 @@ spring:
     mail:
         host: localhost
         port: 25
-        username:
-        password:
+        username: postgres
+        password: root
     messages:
         cache-seconds: 1
     thymeleaf:
