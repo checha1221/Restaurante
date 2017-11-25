@@ -1,0 +1,37 @@
+
+<div *ngIf="tpr">
+    <h2><span jhiTranslate="restauranteApp.tpr.detail.title">Tpr</span> {{tpr.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="restauranteApp.tpr.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{tpr.nombre}}</span>
+        </dd>
+        <dt><span jhiTranslate="restauranteApp.tpr.direccion">Direccion</span></dt>
+        <dd>
+            <span>{{tpr.direccion}}</span>
+        </dd>
+        <dt><span jhiTranslate="restauranteApp.tpr.status">Status</span></dt>
+        <dd>
+            <span>{{tpr.status}}</span>
+        </dd>
+        <dt><span jhiTranslate="restauranteApp.tpr.activo">Activo</span></dt>
+        <dd>
+            <span>{{tpr.activo}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'tpr/'+ tpr.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

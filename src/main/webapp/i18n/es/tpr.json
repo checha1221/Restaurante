@@ -1,0 +1,24 @@
+{
+    "restauranteApp": {
+        "tpr" : {
+            "home": {
+                "title": "Tprs",
+                "createLabel": "Crear nuevo Tpr",
+                "createOrEditLabel": "Crear o editar Tpr"
+            },
+            "created": "Un nuevo Tpr ha sido creado con el identificador {{ param }}",
+            "updated": "Un Tpr ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Tpr ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Tpr {{ id }}?"
+            },
+            "detail": {
+                "title": "Tpr"
+            },
+            "nombre": "Nombre",
+            "direccion": "Direccion",
+            "status": "Status",
+            "activo": "Activo"
+        }
+    }
+}
