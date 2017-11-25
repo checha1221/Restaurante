@@ -1,0 +1,72 @@
+<div>
+    <h2>
+        <span jhiTranslate="restauranteApp.reserva.home.title">Reservas</span>
+        <button class="btn btn-primary float-right jh-create-entity create-reserva" [routerLink]="['/', { outlets: { popup: ['reserva-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="restauranteApp.reserva.home.createLabel">
+            Create new Reserva
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="reservas">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="nombre"><span jhiTranslate="restauranteApp.reserva.nombre">Nombre</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="fecha"><span jhiTranslate="restauranteApp.reserva.fecha">Fecha</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="comensales"><span jhiTranslate="restauranteApp.reserva.comensales">Comensales</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="area"><span jhiTranslate="restauranteApp.reserva.area">Area</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="activo"><span jhiTranslate="restauranteApp.reserva.activo">Activo</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let reserva of reservas ;trackBy: trackId">
+                <td><a [routerLink]="['../reserva', reserva.id ]">{{reserva.id}}</a></td>
+                <td>{{reserva.nombre}}</td>
+                <td>{{reserva.fecha | date:'mediumDate'}}</td>
+                <td>{{reserva.comensales}}</td>
+                <td>{{reserva.area}}</td>
+                <td>{{reserva.activo}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../reserva', reserva.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'reserva/'+ reserva.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'reserva/'+ reserva.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+        <div *ngIf="reservas && reservas.length">
+            <div class="row justify-content-center">
+                <jhi-item-count [page]="page" [total]="queryCount" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+            </div>
+            <div class="row justify-content-center">
+                <ngb-pagination [collectionSize]="totalItems" [maxSize]="5" [pageSize]="itemsPerPage" [(page)]="page" (pageChange)="loadPage(page)"></ngb-pagination>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,41 @@
+
+<div *ngIf="reserva">
+    <h2><span jhiTranslate="restauranteApp.reserva.detail.title">Reserva</span> {{reserva.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="restauranteApp.reserva.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{reserva.nombre}}</span>
+        </dd>
+        <dt><span jhiTranslate="restauranteApp.reserva.fecha">Fecha</span></dt>
+        <dd>
+            <span>{{reserva.fecha | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="restauranteApp.reserva.comensales">Comensales</span></dt>
+        <dd>
+            <span>{{reserva.comensales}}</span>
+        </dd>
+        <dt><span jhiTranslate="restauranteApp.reserva.area">Area</span></dt>
+        <dd>
+            <span>{{reserva.area}}</span>
+        </dd>
+        <dt><span jhiTranslate="restauranteApp.reserva.activo">Activo</span></dt>
+        <dd>
+            <span>{{reserva.activo}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'reserva/'+ reserva.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

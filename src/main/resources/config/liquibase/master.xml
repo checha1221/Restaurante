@@ -10,6 +10,7 @@
     <include file="config/liquibase/changelog/20171125005548_added_entity_Mesa.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20171125010127_added_entity_Platillo.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20171125011125_added_entity_Producto.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171125020052_added_entity_Reserva.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

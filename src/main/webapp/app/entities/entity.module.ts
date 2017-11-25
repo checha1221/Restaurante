@@ -5,6 +5,7 @@ import { RestauranteRestauranteModule } from './restaurante/restaurante.module';
 import { RestauranteMesaModule } from './mesa/mesa.module';
 import { RestaurantePlatilloModule } from './platillo/platillo.module';
 import { RestauranteProductoModule } from './producto/producto.module';
+import { RestauranteReservaModule } from './reserva/reserva.module';
 /* jhipster-needle-add-entity-module-import - JHipster will add entity modules imports here */
 
 @NgModule({
@@ -14,6 +15,7 @@ import { RestauranteProductoModule } from './producto/producto.module';
         RestauranteMesaModule,
         RestaurantePlatilloModule,
         RestauranteProductoModule,
+        RestauranteReservaModule,
         /* jhipster-needle-add-entity-module - JHipster will add entity modules here */
     ],
     declarations: [],
