@@ -7,6 +7,7 @@
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20171125004104_added_entity_Tpr.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20171125004819_added_entity_Restaurante.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171125005548_added_entity_Mesa.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

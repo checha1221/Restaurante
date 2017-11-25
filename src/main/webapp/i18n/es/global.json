@@ -9,6 +9,7 @@
                 "main": "Entidades",
                 "tpr": "Tpr",
                 "restaurante": "Restaurante",
+                "mesa": "Mesa",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

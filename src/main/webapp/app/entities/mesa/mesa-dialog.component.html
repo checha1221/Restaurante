@@ -1,0 +1,55 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myMesaLabel" jhiTranslate="restauranteApp.mesa.home.createOrEditLabel">Create or edit a Mesa</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!mesa.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="mesa.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="restauranteApp.mesa.nombre" for="field_nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="field_nombre"
+                [(ngModel)]="mesa.nombre"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="restauranteApp.mesa.ubicacion" for="field_ubicacion">Ubicacion</label>
+            <input type="text" class="form-control" name="ubicacion" id="field_ubicacion"
+                [(ngModel)]="mesa.ubicacion"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="restauranteApp.mesa.area" for="field_area">Area</label>
+            <input type="text" class="form-control" name="area" id="field_area"
+                [(ngModel)]="mesa.area"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="restauranteApp.mesa.capacidad" for="field_capacidad">Capacidad</label>
+            <input type="number" class="form-control" name="capacidad" id="field_capacidad"
+                [(ngModel)]="mesa.capacidad"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="restauranteApp.mesa.estado" for="field_estado">Estado</label>
+            <input type="text" class="form-control" name="estado" id="field_estado"
+                [(ngModel)]="mesa.estado"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="restauranteApp.mesa.activo" for="field_activo">Activo</label>
+            <input type="checkbox" class="form-control" name="activo" id="field_activo"
+                [(ngModel)]="mesa.activo"  />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

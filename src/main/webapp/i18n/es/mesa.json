@@ -1,0 +1,26 @@
+{
+    "restauranteApp": {
+        "mesa" : {
+            "home": {
+                "title": "Mesas",
+                "createLabel": "Crear nuevo Mesa",
+                "createOrEditLabel": "Crear o editar Mesa"
+            },
+            "created": "Un nuevo Mesa ha sido creado con el identificador {{ param }}",
+            "updated": "Un Mesa ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Mesa ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Mesa {{ id }}?"
+            },
+            "detail": {
+                "title": "Mesa"
+            },
+            "nombre": "Nombre",
+            "ubicacion": "Ubicacion",
+            "area": "Area",
+            "capacidad": "Capacidad",
+            "estado": "Estado",
+            "activo": "Activo"
+        }
+    }
+}
