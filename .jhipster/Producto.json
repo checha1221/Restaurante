@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cantidad",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "vencimiento",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "activo",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20171125011125",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "producto",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

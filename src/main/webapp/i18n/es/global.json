@@ -10,6 +10,8 @@
                 "tpr": "Tpr",
                 "restaurante": "Restaurante",
                 "mesa": "Mesa",
+                "platillo": "Platillo",
+                "producto": "Producto",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

@@ -46,6 +46,8 @@ public class CacheConfiguration {
             cm.createCache(com.mycompany.myapp.domain.Tpr.class.getName(), jcacheConfiguration);
             cm.createCache(com.mycompany.myapp.domain.Restaurante.class.getName(), jcacheConfiguration);
             cm.createCache(com.mycompany.myapp.domain.Mesa.class.getName(), jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.Platillo.class.getName(), jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.Producto.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

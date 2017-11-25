@@ -1,0 +1,50 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myPlatilloLabel" jhiTranslate="restauranteApp.platillo.home.createOrEditLabel">Create or edit a Platillo</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!platillo.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="platillo.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="restauranteApp.platillo.nombre" for="field_nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="field_nombre"
+                [(ngModel)]="platillo.nombre"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="restauranteApp.platillo.detalle" for="field_detalle">Detalle</label>
+            <input type="text" class="form-control" name="detalle" id="field_detalle"
+                [(ngModel)]="platillo.detalle"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="restauranteApp.platillo.vencimiento" for="field_vencimiento">Vencimiento</label>
+            <div class="input-group">
+                <input id="field_vencimiento" type="text" class="form-control" name="vencimiento" ngbDatepicker  #vencimientoDp="ngbDatepicker" [(ngModel)]="platillo.vencimiento"
+                />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-secondary" (click)="vencimientoDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="restauranteApp.platillo.activo" for="field_activo">Activo</label>
+            <input type="checkbox" class="form-control" name="activo" id="field_activo"
+                [(ngModel)]="platillo.activo"  />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

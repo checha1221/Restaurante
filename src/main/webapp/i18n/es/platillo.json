@@ -1,0 +1,24 @@
+{
+    "restauranteApp": {
+        "platillo" : {
+            "home": {
+                "title": "Platillos",
+                "createLabel": "Crear nuevo Platillo",
+                "createOrEditLabel": "Crear o editar Platillo"
+            },
+            "created": "Un nuevo Platillo ha sido creado con el identificador {{ param }}",
+            "updated": "Un Platillo ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Platillo ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Platillo {{ id }}?"
+            },
+            "detail": {
+                "title": "Platillo"
+            },
+            "nombre": "Nombre",
+            "detalle": "Detalle",
+            "vencimiento": "Vencimiento",
+            "activo": "Activo"
+        }
+    }
+}

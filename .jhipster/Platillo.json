@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "detalle",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "vencimiento",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "activo",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20171125010127",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "platillo",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}
